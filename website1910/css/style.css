@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700;900&display=swap');
+/* Asi se accede a las fuentes web de Google */
+@import url("fontawesome-free-6.5.2-web/css/all.min.css");
+
+:root{/* Hace referencia al objeto html */
+    --color1: #003547;
+    --color2: #005E54;
+    --color3: #C2BB00;
+    --color4: #E1523D;
+    --color5: #ED8B16;
+    --color-blanco: #FFFFFF;
+    --color-negro: #000000;
+    --color-gris-claro: #CCCCCC;
+    --color-gris-oscuro: #333333;
+}
+
+body{/* Regla de estilos para la etiqueta body */
+    font-family: Poppins, sans-serif;
+    /* Así se indica el tipo de fuente o letra  */
+    margin: 0;/* Así se elimina el margen por defecto de body */
+    font-size: 18px;
+}
+img{
+    display: block;/* En este caso anular el espacio inferior
+    que aparece por defecto en la imagen */
+}
+p{
+    margin-top: 0;
+    margin-bottom: 18px;
+    line-height: 1.5em;
+}
+h1, h2, h3, h4, h5, h6{
+    margin:0;/* Así se elimina el margen por defecto de los encabezados */
+    line-height: 1.2em;
+    margin-bottom: 0.75em;
+    
+}
+h1{
+    font-size: 64px; /* Tamaño de la fuente en pixeles */
+    font-weight: 200; /* Grosor */
+    letter-spacing: -4px; /* Espacio entre letras */
+    margin-bottom: 0;
+}
+h2{
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    text-transform: lowercase; /* Para que se muestre en minúscula */
+}
+h3{
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase; /* Muestra el texto en mayúscula */
+}
+a{
+    color: var(--color5);
+    text-decoration: none;/* Para que no se muestre subrayado */
+}
+a:hover{/* Es el estado al pasar el puntero del mouse*/
+    color: var(--color2);
+    text-decoration: underline;/* Para que se subraye */
+}
+#main-header p{
+    margin-bottom: 0;
+}
+#main-banner{
+    position: relative;
+}
+#main-banner-leyenda{
+    position: absolute;
+    bottom: -60px;
+    background-color: var(--color3);
+    width: 50%;
+    left: 25%;
+    padding: 30px;
+    box-sizing: border-box;
+}
+#noticias img{
+    margin-bottom: 20px;
+    border-radius: 12px;
+}
+#noticias .contenedor-boton{
+    text-align: center;
+    margin-top: 50px;
+}
+#aviso{
+    background-image: url("../images/concierto.jpg");
+    background-size: cover;
+    background-position: right 30%;
+    color: var(--color-blanco);
+    text-shadow: 2px 2px var(--color-negro);
+}
+#valores{
+    text-align: center;
+}
+#valores i{
+    font-size: 32px;
+    color: var(--color4);
+    margin-bottom: 20px;
+    width: 46px;
+    height: 46px;
+    border: solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 12px;
+}
+#Vitaminas{
+    background-color: var(--color5);
+}
+#fibra{
+    background-color: var(--color5);
+    padding-bottom: 80px;
+}
+#Ejercicios img{
+    margin-top: -30px;
+}
+#funciones img{
+    margin-bottom: 30px;
+}
+#empresa{
+    /*background-color: var(--color2);*/
+    background: radial-gradient(circle at left bottom, var(--color4), var(--color1));
+    color: var(--color-blanco);
+}
+#cursos .col{
+    border: solid 10px var(--color-gris-claro);
+    /* Estilo de borde, grosor de borde, color de borde */
+    padding-top: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#tipvit{
+    background-color: var(--color-gris-claro);
+}
+#conferencia{
+    /* background-color: var(--color3); */
+    background: linear-gradient(90deg, var(--color5), var(--color3));
+}
+#Nutricionista{
+    background-color: var(--color-gris-claro)
+}
+#Nutricionista .row{
+    padding-bottom: 30px;
+}
+#Consejos .row{
+    margin-bottom: 15px;
+}
+
+#colaboradores img{
+    border-radius: 50%;
+}
+#seminario{
+    background-color: var(--color4);
+    color: var(--color-blanco);
+}
+#main-footer{
+    background-color: var(--color-gris-oscuro);
+    color: var(--color-gris-claro);
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+
+.padded{/* Regla de estilos para una clase (Empieza con punto) */
+    padding-top: 90px;/* padding es la distancia del borde al contenido */
+    padding-bottom: 90px;
+}
+.container{
+    max-width: 1200px;/* Ancho máximo */
+
+    margin-left: auto;
+    margin-right: auto;
+    /* Al ser ambos margenes auto el contenido se muestra centrado */
+
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.row{
+    display: flex; /* Acomoda los objetos que contiene por defecto 
+    uno al costado de otro */
+    margin-left: -15px;
+    margin-right: -15px;
+    flex-wrap: wrap;
+}
+.col{
+    flex-basis: 0; 
+    flex-grow: 1;
+    /* Con ambas propiedades las cajas tienen el mismo ancho */
+
+    padding-left: 15px;
+    padding-right: 15px;
+
+    box-sizing: border-box; /* Para que el padding no incremente el ancho (en este caso) */
+}
+.col-33{
+    flex-basis: 33.33%;
+    max-width: 33.33%;
+}
+.col-50{
+    flex-basis: 50%;
+    max-width: 50%;
+}
+.col-66{
+    flex-basis: 66.67%;
+    max-width: 66.67%;
+}
+.col-75{
+    flex-basis: 75%;
+    max-width: 75%;
+}
+.col-foto{
+    flex-basis: 16.66%;
+    max-width: 16.66%;
+    padding-left: 0;
+    padding-right: 0;
+}
+.img-fluid{
+    max-width: 100%;/*Así se indica que el ancho 
+    máximo de la imagen sea el de su contenedor*/
+}
+.centrado-vertical{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.texto-grande{
+    font-size: 72px;
+    font-weight: 200;
+    letter-spacing: -5px;
+    line-height: 0.9em;
+}
+.texto-importante{
+    font-weight: 700;
+    color: var(--color3);
+}
+.boton-rectangular{
+    border: solid var(--color-blanco) 1px;
+    width: fit-content;
+    color: var(--color-blanco);
+    padding: 10px 20px;
+}
+.boton-rectangular:hover{
+    background-color: var(--color-blanco);
+    color: var(--color-negro);
+    text-decoration: none;
+}
+.boton-pildora{
+    background-color: var(--color4);
+    color: var(--color-blanco);
+    padding: 10px 20px;
+    border-radius: 23px;
+}
+.boton-pildora:hover{
+    border: solid 1px var(--color4);
+    background-color: transparent;
+    color: var(--color4);
+    text-decoration: none;
+}
+.foto-empresa{
+    position: relative;
+}
+.foto-empresa-leyenda{
+    position: absolute;
+    /* background-color: rgba(0,0,0,0.6); */
+    background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 60%);
+    width: calc(100% - 30px);
+    height: 100%;
+    top: 0;
+    padding: 60px;
+    box-sizing: border-box;/* Para que el padding no incremente el ancho */
+    opacity: 0; /* Para que el objeto y su contenido estén totalmente transparentes */
+}
+.foto-empresa-leyenda:hover{
+    opacity: 1;
+}
+.alinear-vertical-inferior{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.imagen-espacio{
+    position: relative;
+}
+.imagen-espacio-leyenda{
+    position: absolute;
+    background-color: rgba(0,0,0,0.8);
+    padding: 60px;
+    box-sizing: border-box;
+    width: calc(100% - 150px);
+    height: calc(100% - 120px);
+    top: 0;
+    margin: 60px;
+    border: solid 10px rgba(255,255,255,0.3);
+    opacity: 0;
+}
+.imagen-espacio-leyenda:hover{
+    opacity: 1;
+}
+.evento-abajo{
+    margin-top: 60px;
+}
+.destacado-contenedor{
+    position: relative;
+}
+.destacado{
+    border:solid 2px var(--color4);
+    padding: 30px;
+    border-radius: 15px;
+    background-color: #EEEEEE;
+    position: absolute;
+    width: 100%;
+}
+.card{
+    background-color: var(--color-blanco);
+    border: solid 1px #CCCCCC;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+.card-text{
+    padding: 30px;
+}
+.card-h{
+    display: flex;
+}
+.semicirculo-1{
+    border-radius: 100% 0 0 0;
+}
+.semicirculo-2{
+    border-radius: 0 100% 0 0;
+}
+.semicirculo-3{
+    border-radius: 0 0 100% 0;
+}
+.semicirculo-4{
+    border-radius: 0 0 0 100%;
+}
+.fila-semicirculo .col{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.proteinas-foto{
+    position: relative;
+}
+.proteinas-foto-leyenda{
+    position: absolute;
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
+    top: 0;
+    right: 0;
+    padding: 5px 10px;
+}
